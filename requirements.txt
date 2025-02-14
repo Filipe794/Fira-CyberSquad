@@ -1,0 +1,6 @@
+pigpio
+simple-pid
+numpy
+opencv-python
+smbus2
+RPi.GPIO
