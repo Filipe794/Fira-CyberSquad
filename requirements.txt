@@ -4,3 +4,6 @@ numpy
 opencv-python
 smbus2
 RPi.GPIO
+Flask
+Flask-SocketIO
+Flask-CORS
