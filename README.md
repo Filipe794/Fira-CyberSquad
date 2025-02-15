@@ -2,7 +2,7 @@
 
 # GOOGLE COLAB
 Processo de construção do prototipo descrito, ideias, métodos, equipamentos, entre outras coisas.
-Link: [https://colab.research.google.com/drive/1zOWoBk5XVAWFry4xdbjDOlhXJQDDv-WG?usp=sharing](url)
+[FIRA RoboWorld Cup 2025 - RoboSot Avoidance](https://colab.research.google.com/drive/1zOWoBk5XVAWFry4xdbjDOlhXJQDDv-WG?usp=sharing)
 
 ## Sugestão 
 As implementações, melhorias e observações estão marcadas com comentários "TODO". Para ficar mais fácil de encontrá-los estou utilizando a extensão do VsCode - Todo Tree.
