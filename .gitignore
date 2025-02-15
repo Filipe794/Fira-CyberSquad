@@ -1,1 +1,2 @@
 *.tldr
+__pycache__/
