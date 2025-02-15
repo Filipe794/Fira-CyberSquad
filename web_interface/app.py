@@ -3,6 +3,10 @@ from flask_socketio import SocketIO
 import threading
 import time
 import random
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # adiciona o diretorio raiz ao path, para importar os modulos
 
 # descomentar quando executar no rasp
 # from utils.pid_manager import load_pid_params
