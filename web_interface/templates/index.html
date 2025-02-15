@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento do Robô</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+    <h1>Monitoramento do Robô</h1>
+
+    <div class="status-container">
+        
+        <div class="status-box">
+            <h2>Velocidade dos Motores</h2>
+            <p><strong>Motor 1:</strong> <span id="motor1_speed">Carregando...</span> RPM</p>
+            <p><strong>Motor 2:</strong> <span id="motor2_speed">Carregando...</span> RPM</p>
+            <p><strong>Motor 3:</strong> <span id="motor3_speed">Carregando...</span> RPM</p>
+            <p><strong>Motor 4:</strong> <span id="motor4_speed">Carregando...</span> RPM</p>
+        </div>
+
+        <div class="status-box">
+            <h2>Distância dos Sensores ToF</h2>
+            <p><strong>Frontal:</strong> <span id="tof_front">Carregando...</span> cm</p>
+            <p><strong>Esquerda:</strong> <span id="tof_left">Carregando...</span> cm</p>
+            <p><strong>Direita:</strong> <span id="tof_right">Carregando...</span> cm</p>
+        </div>
+
+        <div class="status-box">
+            <h2>Parâmetros PID dos Motores</h2>
+            <p><strong>Motor 1 - Kp:</strong> <span id="motor1_kp">Carregando...</span>, <strong>Ki:</strong> <span
+                    id="motor1_ki">Carregando...</span>, <strong>Kd:</strong> <span id="motor1_kd">Carregando...</span>
+            </p>
+            <p><strong>Motor 2 - Kp:</strong> <span id="motor2_kp">Carregando...</span>, <strong>Ki:</strong> <span
+                    id="motor2_ki">Carregando...</span>, <strong>Kd:</strong> <span id="motor2_kd">Carregando...</span>
+            </p>
+            <p><strong>Motor 3 - Kp:</strong> <span id="motor3_kp">Carregando...</span>, <strong>Ki:</strong> <span
+                    id="motor3_ki">Carregando...</span>, <strong>Kd:</strong> <span id="motor3_kd">Carregando...</span>
+            </p>
+            <p><strong>Motor 4 - Kp:</strong> <span id="motor4_kp">Carregando...</span>, <strong>Ki:</strong> <span
+                    id="motor4_ki">Carregando...</span>, <strong>Kd:</strong> <span id="motor4_kd">Carregando...</span>
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
