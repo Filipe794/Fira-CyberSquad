@@ -76,3 +76,4 @@ O arquivo `vision.py` integra a visão computacional ao robô, utilizando câmer
     - Sensores VL53L0X
     - Testar implementações feitas
     - Lógica para desvio de obstáculos
+    - Considerar usar ESP32 para aliviar o processamento do Raspberry, ja que talvez tenhamos apenas 2gb de ram
