@@ -1,4 +1,4 @@
-import pigpio
+import pigpio as pi
 import time
 from config import MOTOR_PINS
 import threading

@@ -1,8 +1,8 @@
-# controllers/vision.py
 import cv2
 import numpy as np
 
 # TODO - implementar classe VisionSystem
+# Precisa gerar o mapa para ser processado pelo path planning e pelo Pure Pursuit
 
 class VisionSystem:
     def __init__(self, camera_index=0):
@@ -20,7 +20,6 @@ class VisionSystem:
     def detect_obstacles(self, frame):
         """
         Detecta obstáculos no frame fornecido e retorna a posição relativa.
-        Para simplificação, vamos apenas detectar áreas de alto contraste como obstáculos.
         """
         pass
 
@@ -29,5 +28,3 @@ class VisionSystem:
 
     def release(self):
         self.camera.release()
-        
-
