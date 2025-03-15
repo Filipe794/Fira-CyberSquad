@@ -1,0 +1,53 @@
+autonomous_car/
+├── hardware/                    # Arquivos relacionados ao design mecânico e eletrônico
+│   ├── mechanical/              # Design mecânico (chassi, direção, etc.)
+│   │   ├── 3D_models/           # Modelos 3D (arquivos STL, STEP, etc.)
+│   │   │   ├── chassi/          # Modelos do chassi
+│   │   │   └── steering/        # Modelos do sistema de direção Ackerman
+│   ├── electronics/             # Esquemas e layouts eletrônicos
+│        ├── schematics/          # Esquemas elétricos (ex.: Fritzing ou KiCAD)
+│        └── components_list.md   # Lista de componentes eletrônicos
+├── software/                    # Código-fonte do projeto
+│   ├── raspberry_pi/            # Código para o Raspberry Pi
+│   │   ├── src/                 # Código-fonte principal
+│   │   │   ├── vision/          # Módulos de visão computacional
+│   │   │   │   ├── lane_detection.py  # Detecção da pista
+│   │   │   │   ├── apriltag_detection.py  # Detecção de April Tags
+│   │   │   │   └── obstacle_detection.py  # Detecção de obstáculos
+│   │   │   ├── navigation/      # Módulos de navegação e controle
+│   │   │   │   ├── path_planning.py  # Planejamento de trajetória
+│   │   │   │   ├── pid_control.py    # Controle PID
+│   │   │   │   └── state_machine.py  # Máquina de estados (FSM)
+│   │   │   ├── communication/   # Comunicação serial com Arduino Nano
+│   │   │   │   └── serial_comm.py
+│   │   │   └── main.py          # Script principal que integra tudo
+│   │   ├── tests/               # Testes unitários e scripts de teste
+│   │   ├── config/              # Arquivos de configuração
+│   │   └── requirements.txt     # Dependências Python (ex.: OpenCV, PySerial)
+│   │
+│   ├── arduino_nano/            # Código para o Arduino Nano
+│   │   ├── src/                 # Código-fonte principal
+│   │   │   ├── motor_control/   # Controle dos motores N20
+│   │   │   │   └── motor_control.ino
+│   │   │   ├── servo_control/   # Controle do servo SG90
+│   │   │   │   └── servo_control.ino
+│   │   │   ├── sensors/         # Leitura dos sensores
+│   │   │   │   ├── imu_reading.ino  # Leitura da IMU (MPU-6050)
+│   │   │   │   ├── tof_reading.ino  # Leitura do TOF (VL53L0X)
+│   │   │   │   └── encoder_reading.ino  # Leitura dos encoders
+│   │   │   ├── communication/   # Comunicação serial com Raspberry Pi
+│   │   │   │   └── serial_comm.ino
+│   │   │   └── main.ino         # Sketch principal que integra tudo
+│   │   ├── tests/               # Testes para o Arduino
+│   │   └── lib/                 # Bibliotecas externas (ex.: Adafruit_VL53L0X)
+│
+├── tests/                       # Dados e recursos para testes
+├── scripts/                     # Scripts utilitários
+│   ├── setup/                   # Scripts de configuração
+│   │   ├── install_dependencies.sh  # Instalar dependências no Raspberry Pi
+├── resources/                   # Recursos gerais
+│   ├── datasheets/              # Datasheets dos componentes
+│   ├── images/                  # Imagens gerais do projeto
+│   └── notes/                   # Anotações e ideias
+│
+└── README.md                    # Documentação geral do projeto
