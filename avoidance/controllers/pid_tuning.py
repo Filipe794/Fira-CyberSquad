@@ -2,21 +2,27 @@ import random
 import time
 from utils.pid_manager import load_pid_params, save_pid_params
 
+"""
+Avalia o desempenho do PID com base nos parâmetros fornecidos.
+:param kp: Parâmetro Kp do PID
+:param ki: Parâmetro Ki do PID
+:param kd: Parâmetro Kd do PID
+:param motor: O objeto do motor a ser avaliado
+:return: Diferença entre setpoint e velocidade real
+"""
+
 # Função de avaliação (fitness) - calcula o erro médio do PID
-def evaluate_pid(kp, ki, kd, motor):
-    """
-    Avalia o desempenho do PID com base nos parâmetros fornecidos.
-    :param kp: Parâmetro Kp do PID
-    :param ki: Parâmetro Ki do PID
-    :param kd: Parâmetro Kd do PID
-    :param motor: O objeto do motor a ser avaliado
-    :return: Diferença entre setpoint e velocidade real
-    """
-    
+def evaluate_pid(kp, ki, kd, motor, evaluation_time=1.0):
     motor.pid.tunings = (kp, ki, kd)
-    time.sleep(0.5)  # Tempo para estabilizar o motor
-    error = abs(motor.pid.setpoint - motor.calculate_speed())
-    return error
+    start_time = time.time()
+    total_error = 0.0
+    count = 0
+    while time.time() - start_time < evaluation_time:
+        error = abs(motor.pid.setpoint - motor.calculate_speed())
+        total_error += error
+        count += 1
+    return total_error / count if count > 0 else 0.0
+
 
 # Algoritmo Genético para ajuste de PID
 def genetic_pid_tuning(motor, generations=10, population_size=6):

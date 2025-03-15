@@ -40,9 +40,6 @@ class MotorController:
         # Configura a callback para o encoder
         pi.callback(self.encoder_pin, pigpio.RISING_EDGE, self.encoder_callback)
 
-        # Criação do sensor de distância
-        self.distance_sensor = distance_sensor
-
         # Thread para controle do motor
         self.control_thread = threading.Thread(target=self.update_motor)
         self.control_thread.daemon = True

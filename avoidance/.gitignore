@@ -1,0 +1,4 @@
+*.tldr
+__pycache__/
+tests/
+planning/
