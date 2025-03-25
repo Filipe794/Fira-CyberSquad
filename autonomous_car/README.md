@@ -102,3 +102,4 @@ O objetivo é construir um carro autônomo em escala 1:10 que atenda às especif
 - https://www.youtube.com/watch?v=xBFDSW4aEv0
 - https://www.youtube.com/watch?v=LzyIbJhcxhQ - direção paralela, mas serve de exemplo pra montagem
 - https://www.youtube.com/watch?v=ZvE6yuLVDVc - direção paralela, mas serve de exemplo pra montagem
+- https://www.youtube.com/watch?v=AEbeUMzCr-k - tem o modelo 3d do que parece ser um sistema ackerman

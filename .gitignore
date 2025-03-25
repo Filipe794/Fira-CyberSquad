@@ -1,4 +1,3 @@
 *.tldr
 __pycache__/
-tests/
-planning/
+avoidance/tests/

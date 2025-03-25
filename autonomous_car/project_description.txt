@@ -49,5 +49,7 @@ autonomous_car/
 │   ├── datasheets/              # Datasheets dos componentes
 │   ├── images/                  # Imagens gerais do projeto
 │   └── notes/                   # Anotações e ideias
+├── training/                   # Dados e scripts para treinamento de modelos
+│   ├── dataset/                 
 │
 └── README.md                    # Documentação geral do projeto
